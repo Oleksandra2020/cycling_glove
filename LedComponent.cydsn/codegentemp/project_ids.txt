@@ -1,0 +1,7 @@
+C:\Users\alex\Documents\PSoC Creator\WS2812B-PROC-TEST\WS2812B.cydsn\WS2812B.cyprj|d7db9883-c3d0-4ea4-81a9-070d76d854e7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6b7361ef-4b52-4fe4-9052-e04552e93bb7
+C:\Users\alex\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|0414f720-5291-46e6-bb69-cbb9871d625e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|813735c6-b858-43c8-b595-7b1e9aab5616
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d4b83ad9-eead-4af4-8dbd-0e607455bb76
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|320533eb-3d82-4db1-b9c5-d7ed4bbb2c64
+C:\Users\alex\Documents\PSoC Creator\WS2812B-PROC-TEST\Design01.cydsn\Design01.cyprj|c33026e3-6623-46fc-b82c-e56bc6ffeb6c
