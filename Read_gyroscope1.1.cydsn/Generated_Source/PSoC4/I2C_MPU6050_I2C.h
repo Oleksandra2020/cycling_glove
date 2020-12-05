@@ -282,8 +282,8 @@ typedef struct
     /* Manual operation functions */
     uint32 I2C_MPU6050_I2CMasterSendStart(uint32 slaveAddress, uint32 bitRnW);
     uint32 I2C_MPU6050_I2CMasterSendRestart(uint32 slaveAddress, uint32 bitRnW);
-    uint32 I2C_MPU6050_I2CMasterSendStop(void);
-    uint32 I2C_MPU6050_I2CMasterWriteByte(uint32 theByte);
+    uint32 I2C_MPU6050_I2CMasterSendStop();
+    uint32 I2C_MPU6050_I2CMasterWriteByte(uint32 wrByte);
     uint32 I2C_MPU6050_I2CMasterReadByte(uint32 ackNack);
 #endif /* (I2C_MPU6050_I2C_MASTER_CONST) */
 

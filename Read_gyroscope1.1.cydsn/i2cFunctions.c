@@ -1,16 +1,4 @@
-/* ========================================
- *
- * Copyright Samuel Walsh, 2014
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF Samuel Walsh.
- *
- * ========================================
-*/
 
-/* [] END OF FILE */
 
 #include <project.h>
 #include <I2C_MPU6050.c>

@@ -1,3 +1,3 @@
-# Component constraints for D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\TopDesign\TopDesign.cysch
-# Project: D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Read_gyroscope1.1.cyprj
-# Date: Sun, 01 Nov 2020 18:50:00 GMT
+# Component constraints for D:\UCU\POC\cycling_glove\Read_gyroscope1.1.cydsn\TopDesign\TopDesign.cysch
+# Project: D:\UCU\POC\cycling_glove\Read_gyroscope1.1.cydsn\Read_gyroscope1.1.cyprj
+# Date: Sat, 05 Dec 2020 13:08:32 GMT

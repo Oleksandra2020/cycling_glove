@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2020-11-01T18:50:05Z")
+ (DATE "2020-12-05T13:08:36Z")
  (DESIGN "Read_gyroscope1.1")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -77,6 +77,9 @@
     (INTERCONNECT Input_Pin_0\(0\)_PAD Input_Pin_0\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Input_Pin_1\(0\)_PAD Input_Pin_1\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT Wakeup_Pin\(0\)_PAD Wakeup_Pin\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Up\(0\)_PAD Up\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Down\(0\)_PAD Down\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Right\(0\)_PAD Right\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )
