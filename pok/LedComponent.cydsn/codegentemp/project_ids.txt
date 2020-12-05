@@ -1,0 +1,15 @@
+C:\Users\alex\Documents\PSoC Creator\WS2812B-PROC-TEST\WS2812B.cydsn\WS2812B.cyprj|b74bc868-d5ba-40c2-b255-c2c06adcedb5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5060fd46-4bab-4ffd-9f6d-92ca5d94cc19
+C:\Users\alex\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|3f7e67fc-f1f6-4a34-bb40-7e7c7f82a244
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|8cef32bb-352e-45ab-b754-ef985f7d8f89
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ae5b0397-5305-4cce-911b-e9e09790eaae
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e7a62780-cf4c-484e-a901-15648afd7aa7
+C:\Users\alex\Documents\PSoC Creator\WS2812B-PROC-TEST\Design01.cydsn\Design01.cyprj|8a1a6769-186f-4750-88c6-867058c46b20
+C:\Users\alex\Downloads\NeoPixel\NeoPixel.cylib\NeoPixel.cyprj|42c000b7-6361-4f7c-8801-e44b52a87029
+C:\Users\alex\Downloads\NeoPixel\NeoPixelExample.cydsn\NeoPixelExample.cyprj|2976b6b4-54e6-46db-9d56-a3efada6d333
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|9184c666-4557-41fa-bcb2-7123c7013e97
+C:\Users\alex\Documents\PSoC Creator\FunWithLEDs\EX2_1String.cydsn\EX2_1String.cyprj|4a1b34c4-407a-499c-bc07-a6fe250172ba
+C:\Users\alex\Documents\PSoC Creator\FunWithLEDs\WS281xLib.cylib\WS281xLib.cyprj|510639d8-3b65-4d5e-bcf3-627476312345
+C:\Users\alex\Documents\PSoC Creator\FunWithLEDs\EX1_Text Scroll.cydsn\EX1_Text Scroll.cyprj|97187366-0886-4eb2-9336-f16e7cd65d5c
+C:\Users\alex\Documents\PSoC Creator\FunWithLEDs\Library_test.cydsn\Library_test.cyprj|3837005e-662b-4261-ba99-4f08e99c36b3
+C:\Users\alex\Documents\PSoC Creator\FunWithLEDs\Library_example.cydsn\Library_example.cyprj|cf75c09a-f123-4696-8422-b5dad80236b0

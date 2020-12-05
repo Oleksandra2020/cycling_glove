@@ -1,0 +1,1702 @@
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.SlowColorBlend,"ax",%progbits
+  20              		.align	2
+  21              		.global	SlowColorBlend
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	SlowColorBlend, %function
+  25              	SlowColorBlend:
+  26              	.LFB36:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * EX2_String
+   4:main.c        ****  *
+   5:main.c        ****  * A simple function to cycle the color table
+   6:main.c        ****  * through the string.
+   7:main.c        ****  *
+   8:main.c        ****  * ========================================
+   9:main.c        **** */
+  10:main.c        **** #include "project.h"
+  11:main.c        **** 
+  12:main.c        **** void SlowColorBlend(uint32 delay, uint32 time);
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  17:main.c        ****     StripLights_Start();
+  18:main.c        ****     
+  19:main.c        ****     
+  20:main.c        **** 
+  21:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  22:main.c        **** 
+  23:main.c        ****     for(;;)
+  24:main.c        ****     {
+  25:main.c        ****         SlowColorBlend(0, 10000);
+  26:main.c        ****     }
+  27:main.c        **** }
+  28:main.c        **** 
+  29:main.c        **** /************************************************
+  30:main.c        ****  *                    SlowColorBlend()
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 2
+
+
+  31:main.c        ****  *
+  32:main.c        ****  *  Slowly migate all the LEDs through the color
+  33:main.c        ****  *  table.
+  34:main.c        ****  *
+  35:main.c        ****  ************************************************/
+  36:main.c        **** void SlowColorBlend(uint32 delay, uint32 time)
+  37:main.c        **** {
+  28              		.loc 1 37 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 40
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 30B5     		push	{r4, r5, lr}
+  34              		.cfi_def_cfa_offset 12
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  38 0002 8BB0     		sub	sp, sp, #44
+  39              		.cfi_def_cfa_offset 56
+  40              	.LVL1:
+  38:main.c        ****     uint32 timeCnt = 0; 
+  39:main.c        ****     uint32 led = 0;
+  40:main.c        ****     uint32 x = 0;
+  41:main.c        ****     uint32 pct = 0;
+  42:main.c        ****     uint32 fromColor, toColor, color;
+  43:main.c        ****     extern const uint32 StripLights_CLUT[ ];
+  44:main.c        **** 
+  45:main.c        ****     StripLights_Dim(0); 
+  41              		.loc 1 45 0
+  42 0004 0020     		movs	r0, #0
+  43              	.LVL2:
+  44 0006 FFF7FEFF 		bl	StripLights_Dim
+  45              	.LVL3:
+  46              	.L14:
+  47              	.LBB2:
+  46:main.c        **** 
+  47:main.c        ****     for(;;)
+  48:main.c        ****     {   
+  49:main.c        ****        int16 length = 10;
+  50:main.c        ****        uint16 arr[] = {0, 1, 2, 12, 13, 14, 15, 17, 18, 19, 20, 28, 29};
+  51:main.c        ****         uint16 right_arr[] = {1, 3, 7, 9, 12, 14, 19, 21, 25, 27};
+  48              		.loc 1 51 0
+  49 000a 3E4C     		ldr	r4, .L15
+  50 000c 1422     		movs	r2, #20
+  51 000e 2100     		movs	r1, r4
+  52 0010 6846     		mov	r0, sp
+  53 0012 FFF7FEFF 		bl	memcpy
+  54              	.LVL4:
+  52:main.c        ****         uint16 left_arr[] = {0, 2, 7, 9, 13, 15, 19, 21, 24, 26};
+  55              		.loc 1 52 0
+  56 0016 2100     		movs	r1, r4
+  57 0018 1431     		adds	r1, r1, #20
+  58 001a 1422     		movs	r2, #20
+  59 001c 05A8     		add	r0, sp, #20
+  60 001e FFF7FEFF 		bl	memcpy
+  61              	.LVL5:
+  53:main.c        ****         int16 i = 0;
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 3
+
+
+  62              		.loc 1 53 0
+  63 0022 0024     		movs	r4, #0
+  54:main.c        ****         while (i < length)
+  64              		.loc 1 54 0
+  65 0024 0CE0     		b	.L2
+  66              	.LVL6:
+  67              	.L3:
+  55:main.c        ****         {   
+  56:main.c        ****             StripLights_Pixel(right_arr[i], 0, StripLights_GREEN);
+  68              		.loc 1 56 0
+  69 0026 6300     		lsls	r3, r4, #1
+  70 0028 6A46     		mov	r2, sp
+  71 002a 9D5A     		ldrh	r5, [r3, r2]
+  72 002c 5E20     		movs	r0, #94
+  73 002e FFF7FEFF 		bl	StripLights_getColor
+  74              	.LVL7:
+  75 0032 0200     		movs	r2, r0
+  76 0034 0021     		movs	r1, #0
+  77 0036 2800     		movs	r0, r5
+  78 0038 FFF7FEFF 		bl	StripLights_Pixel
+  79              	.LVL8:
+  57:main.c        ****             i += 1;
+  80              		.loc 1 57 0
+  81 003c 0134     		adds	r4, r4, #1
+  82              	.LVL9:
+  83 003e 24B2     		sxth	r4, r4
+  84              	.LVL10:
+  85              	.L2:
+  54:main.c        ****         while (i < length)
+  86              		.loc 1 54 0
+  87 0040 092C     		cmp	r4, #9
+  88 0042 F0DD     		ble	.L3
+  89              	.L4:
+  58:main.c        ****         }
+  59:main.c        ****         while( StripLights_Ready() == 0);
+  90              		.loc 1 59 0 discriminator 1
+  91 0044 FFF7FEFF 		bl	StripLights_Ready
+  92              	.LVL11:
+  93 0048 0028     		cmp	r0, #0
+  94 004a FBD0     		beq	.L4
+  60:main.c        ****         StripLights_Trigger(1);
+  95              		.loc 1 60 0
+  96 004c 0120     		movs	r0, #1
+  97 004e FFF7FEFF 		bl	StripLights_Trigger
+  98              	.LVL12:
+  61:main.c        ****         CyDelay(500);
+  99              		.loc 1 61 0
+ 100 0052 FA20     		movs	r0, #250
+ 101 0054 4000     		lsls	r0, r0, #1
+ 102 0056 FFF7FEFF 		bl	CyDelay
+ 103              	.LVL13:
+  62:main.c        ****         i = 0;
+ 104              		.loc 1 62 0
+ 105 005a 0024     		movs	r4, #0
+  63:main.c        ****         while (i < length)
+ 106              		.loc 1 63 0
+ 107 005c 0CE0     		b	.L5
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 4
+
+
+ 108              	.LVL14:
+ 109              	.L6:
+  64:main.c        ****         {   
+  65:main.c        ****             StripLights_Pixel(right_arr[i], 0, StripLights_INVISIBLE);
+ 110              		.loc 1 65 0
+ 111 005e 6300     		lsls	r3, r4, #1
+ 112 0060 6A46     		mov	r2, sp
+ 113 0062 9D5A     		ldrh	r5, [r3, r2]
+ 114 0064 6120     		movs	r0, #97
+ 115 0066 FFF7FEFF 		bl	StripLights_getColor
+ 116              	.LVL15:
+ 117 006a 0200     		movs	r2, r0
+ 118 006c 0021     		movs	r1, #0
+ 119 006e 2800     		movs	r0, r5
+ 120 0070 FFF7FEFF 		bl	StripLights_Pixel
+ 121              	.LVL16:
+  66:main.c        ****             i += 1;
+ 122              		.loc 1 66 0
+ 123 0074 0134     		adds	r4, r4, #1
+ 124              	.LVL17:
+ 125 0076 24B2     		sxth	r4, r4
+ 126              	.LVL18:
+ 127              	.L5:
+  63:main.c        ****         while (i < length)
+ 128              		.loc 1 63 0
+ 129 0078 092C     		cmp	r4, #9
+ 130 007a F0DD     		ble	.L6
+ 131              	.L7:
+  67:main.c        ****         }
+  68:main.c        ****         while( StripLights_Ready() == 0);
+ 132              		.loc 1 68 0 discriminator 1
+ 133 007c FFF7FEFF 		bl	StripLights_Ready
+ 134              	.LVL19:
+ 135 0080 0028     		cmp	r0, #0
+ 136 0082 FBD0     		beq	.L7
+  69:main.c        ****         StripLights_Trigger(1);
+ 137              		.loc 1 69 0
+ 138 0084 0120     		movs	r0, #1
+ 139 0086 FFF7FEFF 		bl	StripLights_Trigger
+ 140              	.LVL20:
+  70:main.c        ****         CyDelay(500);
+ 141              		.loc 1 70 0
+ 142 008a FA20     		movs	r0, #250
+ 143 008c 4000     		lsls	r0, r0, #1
+ 144 008e FFF7FEFF 		bl	CyDelay
+ 145              	.LVL21:
+  71:main.c        ****         i = 0;
+ 146              		.loc 1 71 0
+ 147 0092 0024     		movs	r4, #0
+  72:main.c        ****         while (i < length)
+ 148              		.loc 1 72 0
+ 149 0094 0CE0     		b	.L8
+ 150              	.LVL22:
+ 151              	.L9:
+  73:main.c        ****         {   
+  74:main.c        ****             StripLights_Pixel(left_arr[i], 0, StripLights_GREEN);
+ 152              		.loc 1 74 0
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 5
+
+
+ 153 0096 6200     		lsls	r2, r4, #1
+ 154 0098 05AB     		add	r3, sp, #20
+ 155 009a D55A     		ldrh	r5, [r2, r3]
+ 156 009c 5E20     		movs	r0, #94
+ 157 009e FFF7FEFF 		bl	StripLights_getColor
+ 158              	.LVL23:
+ 159 00a2 0200     		movs	r2, r0
+ 160 00a4 0021     		movs	r1, #0
+ 161 00a6 2800     		movs	r0, r5
+ 162 00a8 FFF7FEFF 		bl	StripLights_Pixel
+ 163              	.LVL24:
+  75:main.c        ****             i += 1;
+ 164              		.loc 1 75 0
+ 165 00ac 0134     		adds	r4, r4, #1
+ 166              	.LVL25:
+ 167 00ae 24B2     		sxth	r4, r4
+ 168              	.LVL26:
+ 169              	.L8:
+  72:main.c        ****         while (i < length)
+ 170              		.loc 1 72 0
+ 171 00b0 092C     		cmp	r4, #9
+ 172 00b2 F0DD     		ble	.L9
+ 173              	.L10:
+  76:main.c        ****         }
+  77:main.c        ****         while( StripLights_Ready() == 0);
+ 174              		.loc 1 77 0 discriminator 1
+ 175 00b4 FFF7FEFF 		bl	StripLights_Ready
+ 176              	.LVL27:
+ 177 00b8 0028     		cmp	r0, #0
+ 178 00ba FBD0     		beq	.L10
+  78:main.c        ****         StripLights_Trigger(1);
+ 179              		.loc 1 78 0
+ 180 00bc 0120     		movs	r0, #1
+ 181 00be FFF7FEFF 		bl	StripLights_Trigger
+ 182              	.LVL28:
+  79:main.c        ****         CyDelay(500);
+ 183              		.loc 1 79 0
+ 184 00c2 FA20     		movs	r0, #250
+ 185 00c4 4000     		lsls	r0, r0, #1
+ 186 00c6 FFF7FEFF 		bl	CyDelay
+ 187              	.LVL29:
+  80:main.c        ****         
+  81:main.c        ****         i = 0;
+ 188              		.loc 1 81 0
+ 189 00ca 0024     		movs	r4, #0
+  82:main.c        ****         while (i < length)
+ 190              		.loc 1 82 0
+ 191 00cc 0CE0     		b	.L11
+ 192              	.LVL30:
+ 193              	.L12:
+  83:main.c        ****         {   
+  84:main.c        ****             StripLights_Pixel(left_arr[i], 0, StripLights_INVISIBLE);
+ 194              		.loc 1 84 0
+ 195 00ce 6200     		lsls	r2, r4, #1
+ 196 00d0 05AB     		add	r3, sp, #20
+ 197 00d2 D55A     		ldrh	r5, [r2, r3]
+ 198 00d4 6120     		movs	r0, #97
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 6
+
+
+ 199 00d6 FFF7FEFF 		bl	StripLights_getColor
+ 200              	.LVL31:
+ 201 00da 0200     		movs	r2, r0
+ 202 00dc 0021     		movs	r1, #0
+ 203 00de 2800     		movs	r0, r5
+ 204 00e0 FFF7FEFF 		bl	StripLights_Pixel
+ 205              	.LVL32:
+  85:main.c        ****             i += 1;
+ 206              		.loc 1 85 0
+ 207 00e4 0134     		adds	r4, r4, #1
+ 208              	.LVL33:
+ 209 00e6 24B2     		sxth	r4, r4
+ 210              	.LVL34:
+ 211              	.L11:
+  82:main.c        ****         while (i < length)
+ 212              		.loc 1 82 0
+ 213 00e8 092C     		cmp	r4, #9
+ 214 00ea F0DD     		ble	.L12
+ 215              	.L13:
+  86:main.c        ****         }
+  87:main.c        ****         while( StripLights_Ready() == 0);
+ 216              		.loc 1 87 0 discriminator 1
+ 217 00ec FFF7FEFF 		bl	StripLights_Ready
+ 218              	.LVL35:
+ 219 00f0 0028     		cmp	r0, #0
+ 220 00f2 FBD0     		beq	.L13
+  88:main.c        ****         StripLights_Trigger(1);
+ 221              		.loc 1 88 0
+ 222 00f4 0120     		movs	r0, #1
+ 223 00f6 FFF7FEFF 		bl	StripLights_Trigger
+ 224              	.LVL36:
+  89:main.c        ****         CyDelay(500);
+ 225              		.loc 1 89 0
+ 226 00fa FA20     		movs	r0, #250
+ 227 00fc 4000     		lsls	r0, r0, #1
+ 228 00fe FFF7FEFF 		bl	CyDelay
+ 229              	.LVL37:
+ 230              	.LBE2:
+  90:main.c        **** //        while(1)
+  91:main.c        **** //        {
+  92:main.c        ****            
+  93:main.c        **** //            for(pct = 0; pct < 100; pct += 4)
+  94:main.c        **** //            {
+  95:main.c        **** //                for(led = 0; led <= StripLights_MAX_X; led++)
+  96:main.c        **** //                {
+  97:main.c        **** // 
+  98:main.c        **** //                    fromColor =  StripLights_CLUT[(x + 0 + ((led * StripLights_COLOR_WHEEL_SIZE)/
+  99:main.c        **** //                    toColor =  StripLights_CLUT[(x + 1 + ((led * StripLights_COLOR_WHEEL_SIZE)/St
+ 100:main.c        **** //                    
+ 101:main.c        **** //                    color = StripLights_RgbBlend(fromColor, toColor, pct);                  
+ 102:main.c        **** //                    StripLights_Pixel(led, 0, color );
+ 103:main.c        **** //                }
+ 104:main.c        **** //                
+ 105:main.c        **** //                 while( StripLights_Ready() == 0);
+ 106:main.c        **** //	
+ 107:main.c        **** //	            StripLights_Trigger(1);
+ 108:main.c        **** //                CyDelay(delay);
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 7
+
+
+ 109:main.c        **** //
+ 110:main.c        **** //            }
+ 111:main.c        **** //            x++;  // Advance through color wheel
+ 112:main.c        **** //        }
+ 113:main.c        **** //        timeCnt += delay;
+ 114:main.c        ****  
+ 115:main.c        ****      
+ 116:main.c        **** //     if(SW1_Read() == 0) break;  // If SW1 pressed leave
+ 117:main.c        **** //         if(timeCnt > time) break;
+ 118:main.c        ****     }	
+ 231              		.loc 1 118 0
+ 232 0102 82E7     		b	.L14
+ 233              	.L16:
+ 234              		.align	2
+ 235              	.L15:
+ 236 0104 00000000 		.word	.LANCHOR0
+ 237              		.cfi_endproc
+ 238              	.LFE36:
+ 239              		.size	SlowColorBlend, .-SlowColorBlend
+ 240              		.section	.text.main,"ax",%progbits
+ 241              		.align	2
+ 242              		.global	main
+ 243              		.code	16
+ 244              		.thumb_func
+ 245              		.type	main, %function
+ 246              	main:
+ 247              	.LFB35:
+  15:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 248              		.loc 1 15 0
+ 249              		.cfi_startproc
+ 250              		@ Volatile: function does not return.
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253 0000 10B5     		push	{r4, lr}
+ 254              		.cfi_def_cfa_offset 8
+ 255              		.cfi_offset 4, -8
+ 256              		.cfi_offset 14, -4
+  16:main.c        ****     StripLights_Start();
+ 257              		.loc 1 16 0
+ 258              		.syntax divided
+ 259              	@ 16 "main.c" 1
+ 260 0002 62B6     		CPSIE   i
+ 261              	@ 0 "" 2
+  17:main.c        ****     
+ 262              		.loc 1 17 0
+ 263              		.thumb
+ 264              		.syntax unified
+ 265 0004 FFF7FEFF 		bl	StripLights_Start
+ 266              	.LVL38:
+  25:main.c        ****     }
+ 267              		.loc 1 25 0
+ 268 0008 0149     		ldr	r1, .L18
+ 269 000a 0020     		movs	r0, #0
+ 270 000c FFF7FEFF 		bl	SlowColorBlend
+ 271              	.LVL39:
+ 272              	.L19:
+ 273              		.align	2
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 8
+
+
+ 274              	.L18:
+ 275 0010 10270000 		.word	10000
+ 276              		.cfi_endproc
+ 277              	.LFE35:
+ 278              		.size	main, .-main
+ 279              		.section	.rodata
+ 280              		.align	2
+ 281              		.set	.LANCHOR0,. + 0
+ 282              	.LC1:
+ 283 0000 0100     		.short	1
+ 284 0002 0300     		.short	3
+ 285 0004 0700     		.short	7
+ 286 0006 0900     		.short	9
+ 287 0008 0C00     		.short	12
+ 288 000a 0E00     		.short	14
+ 289 000c 1300     		.short	19
+ 290 000e 1500     		.short	21
+ 291 0010 1900     		.short	25
+ 292 0012 1B00     		.short	27
+ 293              	.LC2:
+ 294 0014 0000     		.short	0
+ 295 0016 0200     		.short	2
+ 296 0018 0700     		.short	7
+ 297 001a 0900     		.short	9
+ 298 001c 0D00     		.short	13
+ 299 001e 0F00     		.short	15
+ 300 0020 1300     		.short	19
+ 301 0022 1500     		.short	21
+ 302 0024 1800     		.short	24
+ 303 0026 1A00     		.short	26
+ 304              		.text
+ 305              	.Letext0:
+ 306              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 307              		.file 3 "Generated_Source\\PSoC4/StripLights.h"
+ 308              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
+ 309              		.section	.debug_info,"",%progbits
+ 310              	.Ldebug_info0:
+ 311 0000 10040000 		.4byte	0x410
+ 312 0004 0400     		.2byte	0x4
+ 313 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 314 000a 04       		.byte	0x4
+ 315 000b 01       		.uleb128 0x1
+ 316 000c 51010000 		.4byte	.LASF33
+ 317 0010 0C       		.byte	0xc
+ 318 0011 F6010000 		.4byte	.LASF34
+ 319 0015 63000000 		.4byte	.LASF35
+ 320 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 321 001d 00000000 		.4byte	0
+ 322 0021 00000000 		.4byte	.Ldebug_line0
+ 323 0025 02       		.uleb128 0x2
+ 324 0026 01       		.byte	0x1
+ 325 0027 06       		.byte	0x6
+ 326 0028 4A020000 		.4byte	.LASF0
+ 327 002c 02       		.uleb128 0x2
+ 328 002d 01       		.byte	0x1
+ 329 002e 08       		.byte	0x8
+ 330 002f AA000000 		.4byte	.LASF1
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 9
+
+
+ 331 0033 02       		.uleb128 0x2
+ 332 0034 02       		.byte	0x2
+ 333 0035 05       		.byte	0x5
+ 334 0036 FB000000 		.4byte	.LASF2
+ 335 003a 02       		.uleb128 0x2
+ 336 003b 02       		.byte	0x2
+ 337 003c 07       		.byte	0x7
+ 338 003d D9000000 		.4byte	.LASF3
+ 339 0041 02       		.uleb128 0x2
+ 340 0042 04       		.byte	0x4
+ 341 0043 05       		.byte	0x5
+ 342 0044 25020000 		.4byte	.LASF4
+ 343 0048 02       		.uleb128 0x2
+ 344 0049 04       		.byte	0x4
+ 345 004a 07       		.byte	0x7
+ 346 004b BE000000 		.4byte	.LASF5
+ 347 004f 02       		.uleb128 0x2
+ 348 0050 08       		.byte	0x8
+ 349 0051 05       		.byte	0x5
+ 350 0052 E8010000 		.4byte	.LASF6
+ 351 0056 02       		.uleb128 0x2
+ 352 0057 08       		.byte	0x8
+ 353 0058 07       		.byte	0x7
+ 354 0059 35010000 		.4byte	.LASF7
+ 355 005d 03       		.uleb128 0x3
+ 356 005e 04       		.byte	0x4
+ 357 005f 05       		.byte	0x5
+ 358 0060 696E7400 		.ascii	"int\000"
+ 359 0064 02       		.uleb128 0x2
+ 360 0065 04       		.byte	0x4
+ 361 0066 07       		.byte	0x7
+ 362 0067 1E010000 		.4byte	.LASF8
+ 363 006b 04       		.uleb128 0x4
+ 364 006c 0B010000 		.4byte	.LASF9
+ 365 0070 02       		.byte	0x2
+ 366 0071 D301     		.2byte	0x1d3
+ 367 0073 3A000000 		.4byte	0x3a
+ 368 0077 04       		.uleb128 0x4
+ 369 0078 12010000 		.4byte	.LASF10
+ 370 007c 02       		.byte	0x2
+ 371 007d D401     		.2byte	0x1d4
+ 372 007f 48000000 		.4byte	0x48
+ 373 0083 04       		.uleb128 0x4
+ 374 0084 B8000000 		.4byte	.LASF11
+ 375 0088 02       		.byte	0x2
+ 376 0089 D601     		.2byte	0x1d6
+ 377 008b 33000000 		.4byte	0x33
+ 378 008f 02       		.uleb128 0x2
+ 379 0090 04       		.byte	0x4
+ 380 0091 04       		.byte	0x4
+ 381 0092 57000000 		.4byte	.LASF12
+ 382 0096 02       		.uleb128 0x2
+ 383 0097 08       		.byte	0x8
+ 384 0098 04       		.byte	0x4
+ 385 0099 F4000000 		.4byte	.LASF13
+ 386 009d 02       		.uleb128 0x2
+ 387 009e 01       		.byte	0x1
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 10
+
+
+ 388 009f 08       		.byte	0x8
+ 389 00a0 00000000 		.4byte	.LASF14
+ 390 00a4 02       		.uleb128 0x2
+ 391 00a5 04       		.byte	0x4
+ 392 00a6 07       		.byte	0x7
+ 393 00a7 DF010000 		.4byte	.LASF15
+ 394 00ab 02       		.uleb128 0x2
+ 395 00ac 08       		.byte	0x8
+ 396 00ad 04       		.byte	0x4
+ 397 00ae 3E020000 		.4byte	.LASF16
+ 398 00b2 05       		.uleb128 0x5
+ 399 00b3 33000000 		.4byte	.LASF36
+ 400 00b7 01       		.byte	0x1
+ 401 00b8 24       		.byte	0x24
+ 402 00b9 00000000 		.4byte	.LFB36
+ 403 00bd 08010000 		.4byte	.LFE36-.LFB36
+ 404 00c1 01       		.uleb128 0x1
+ 405 00c2 9C       		.byte	0x9c
+ 406 00c3 4F030000 		.4byte	0x34f
+ 407 00c7 06       		.uleb128 0x6
+ 408 00c8 5D000000 		.4byte	.LASF17
+ 409 00cc 01       		.byte	0x1
+ 410 00cd 24       		.byte	0x24
+ 411 00ce 77000000 		.4byte	0x77
+ 412 00d2 00000000 		.4byte	.LLST0
+ 413 00d6 06       		.uleb128 0x6
+ 414 00d7 4C010000 		.4byte	.LASF18
+ 415 00db 01       		.byte	0x1
+ 416 00dc 24       		.byte	0x24
+ 417 00dd 77000000 		.4byte	0x77
+ 418 00e1 21000000 		.4byte	.LLST1
+ 419 00e5 07       		.uleb128 0x7
+ 420 00e6 16020000 		.4byte	.LASF19
+ 421 00ea 01       		.byte	0x1
+ 422 00eb 26       		.byte	0x26
+ 423 00ec 77000000 		.4byte	0x77
+ 424 00f0 00       		.byte	0
+ 425 00f1 08       		.uleb128 0x8
+ 426 00f2 6C656400 		.ascii	"led\000"
+ 427 00f6 01       		.byte	0x1
+ 428 00f7 27       		.byte	0x27
+ 429 00f8 77000000 		.4byte	0x77
+ 430 00fc 00       		.byte	0
+ 431 00fd 08       		.uleb128 0x8
+ 432 00fe 7800     		.ascii	"x\000"
+ 433 0100 01       		.byte	0x1
+ 434 0101 28       		.byte	0x28
+ 435 0102 77000000 		.4byte	0x77
+ 436 0106 00       		.byte	0
+ 437 0107 08       		.uleb128 0x8
+ 438 0108 70637400 		.ascii	"pct\000"
+ 439 010c 01       		.byte	0x1
+ 440 010d 29       		.byte	0x29
+ 441 010e 77000000 		.4byte	0x77
+ 442 0112 00       		.byte	0
+ 443 0113 09       		.uleb128 0x9
+ 444 0114 2B010000 		.4byte	.LASF20
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 11
+
+
+ 445 0118 01       		.byte	0x1
+ 446 0119 2A       		.byte	0x2a
+ 447 011a 77000000 		.4byte	0x77
+ 448 011e 09       		.uleb128 0x9
+ 449 011f EC000000 		.4byte	.LASF21
+ 450 0123 01       		.byte	0x1
+ 451 0124 2A       		.byte	0x2a
+ 452 0125 77000000 		.4byte	0x77
+ 453 0129 09       		.uleb128 0x9
+ 454 012a 05010000 		.4byte	.LASF22
+ 455 012e 01       		.byte	0x1
+ 456 012f 2A       		.byte	0x2a
+ 457 0130 77000000 		.4byte	0x77
+ 458 0134 0A       		.uleb128 0xa
+ 459 0135 56020000 		.4byte	.LASF37
+ 460 0139 01       		.byte	0x1
+ 461 013a 2B       		.byte	0x2b
+ 462 013b 5F030000 		.4byte	0x35f
+ 463 013f 0B       		.uleb128 0xb
+ 464 0140 0A000000 		.4byte	.LBB2
+ 465 0144 F8000000 		.4byte	.LBE2-.LBB2
+ 466 0148 3F030000 		.4byte	0x33f
+ 467 014c 07       		.uleb128 0x7
+ 468 014d 1E020000 		.4byte	.LASF23
+ 469 0151 01       		.byte	0x1
+ 470 0152 31       		.byte	0x31
+ 471 0153 83000000 		.4byte	0x83
+ 472 0157 0A       		.byte	0xa
+ 473 0158 0C       		.uleb128 0xc
+ 474 0159 61727200 		.ascii	"arr\000"
+ 475 015d 01       		.byte	0x1
+ 476 015e 32       		.byte	0x32
+ 477 015f 64030000 		.4byte	0x364
+ 478 0163 0D       		.uleb128 0xd
+ 479 0164 29000000 		.4byte	.LASF24
+ 480 0168 01       		.byte	0x1
+ 481 0169 33       		.byte	0x33
+ 482 016a 74030000 		.4byte	0x374
+ 483 016e 02       		.uleb128 0x2
+ 484 016f 91       		.byte	0x91
+ 485 0170 48       		.sleb128 -56
+ 486 0171 0D       		.uleb128 0xd
+ 487 0172 D0000000 		.4byte	.LASF25
+ 488 0176 01       		.byte	0x1
+ 489 0177 34       		.byte	0x34
+ 490 0178 74030000 		.4byte	0x374
+ 491 017c 02       		.uleb128 0x2
+ 492 017d 91       		.byte	0x91
+ 493 017e 5C       		.sleb128 -36
+ 494 017f 0E       		.uleb128 0xe
+ 495 0180 6900     		.ascii	"i\000"
+ 496 0182 01       		.byte	0x1
+ 497 0183 35       		.byte	0x35
+ 498 0184 83000000 		.4byte	0x83
+ 499 0188 42000000 		.4byte	.LLST2
+ 500 018c 0F       		.uleb128 0xf
+ 501 018d 16000000 		.4byte	.LVL4
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 12
+
+
+ 502 0191 BD030000 		.4byte	0x3bd
+ 503 0195 AB010000 		.4byte	0x1ab
+ 504 0199 10       		.uleb128 0x10
+ 505 019a 01       		.uleb128 0x1
+ 506 019b 50       		.byte	0x50
+ 507 019c 02       		.uleb128 0x2
+ 508 019d 7D       		.byte	0x7d
+ 509 019e 00       		.sleb128 0
+ 510 019f 10       		.uleb128 0x10
+ 511 01a0 01       		.uleb128 0x1
+ 512 01a1 51       		.byte	0x51
+ 513 01a2 02       		.uleb128 0x2
+ 514 01a3 74       		.byte	0x74
+ 515 01a4 00       		.sleb128 0
+ 516 01a5 10       		.uleb128 0x10
+ 517 01a6 01       		.uleb128 0x1
+ 518 01a7 52       		.byte	0x52
+ 519 01a8 01       		.uleb128 0x1
+ 520 01a9 44       		.byte	0x44
+ 521 01aa 00       		.byte	0
+ 522 01ab 0F       		.uleb128 0xf
+ 523 01ac 22000000 		.4byte	.LVL5
+ 524 01b0 BD030000 		.4byte	0x3bd
+ 525 01b4 CA010000 		.4byte	0x1ca
+ 526 01b8 10       		.uleb128 0x10
+ 527 01b9 01       		.uleb128 0x1
+ 528 01ba 50       		.byte	0x50
+ 529 01bb 02       		.uleb128 0x2
+ 530 01bc 91       		.byte	0x91
+ 531 01bd 5C       		.sleb128 -36
+ 532 01be 10       		.uleb128 0x10
+ 533 01bf 01       		.uleb128 0x1
+ 534 01c0 51       		.byte	0x51
+ 535 01c1 02       		.uleb128 0x2
+ 536 01c2 74       		.byte	0x74
+ 537 01c3 14       		.sleb128 20
+ 538 01c4 10       		.uleb128 0x10
+ 539 01c5 01       		.uleb128 0x1
+ 540 01c6 52       		.byte	0x52
+ 541 01c7 01       		.uleb128 0x1
+ 542 01c8 44       		.byte	0x44
+ 543 01c9 00       		.byte	0
+ 544 01ca 0F       		.uleb128 0xf
+ 545 01cb 32000000 		.4byte	.LVL7
+ 546 01cf C6030000 		.4byte	0x3c6
+ 547 01d3 DE010000 		.4byte	0x1de
+ 548 01d7 10       		.uleb128 0x10
+ 549 01d8 01       		.uleb128 0x1
+ 550 01d9 50       		.byte	0x50
+ 551 01da 02       		.uleb128 0x2
+ 552 01db 08       		.byte	0x8
+ 553 01dc 5E       		.byte	0x5e
+ 554 01dd 00       		.byte	0
+ 555 01de 0F       		.uleb128 0xf
+ 556 01df 3C000000 		.4byte	.LVL8
+ 557 01e3 D1030000 		.4byte	0x3d1
+ 558 01e7 F7010000 		.4byte	0x1f7
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 13
+
+
+ 559 01eb 10       		.uleb128 0x10
+ 560 01ec 01       		.uleb128 0x1
+ 561 01ed 50       		.byte	0x50
+ 562 01ee 02       		.uleb128 0x2
+ 563 01ef 75       		.byte	0x75
+ 564 01f0 00       		.sleb128 0
+ 565 01f1 10       		.uleb128 0x10
+ 566 01f2 01       		.uleb128 0x1
+ 567 01f3 51       		.byte	0x51
+ 568 01f4 01       		.uleb128 0x1
+ 569 01f5 30       		.byte	0x30
+ 570 01f6 00       		.byte	0
+ 571 01f7 11       		.uleb128 0x11
+ 572 01f8 48000000 		.4byte	.LVL11
+ 573 01fc DC030000 		.4byte	0x3dc
+ 574 0200 0F       		.uleb128 0xf
+ 575 0201 52000000 		.4byte	.LVL12
+ 576 0205 E7030000 		.4byte	0x3e7
+ 577 0209 13020000 		.4byte	0x213
+ 578 020d 10       		.uleb128 0x10
+ 579 020e 01       		.uleb128 0x1
+ 580 020f 50       		.byte	0x50
+ 581 0210 01       		.uleb128 0x1
+ 582 0211 31       		.byte	0x31
+ 583 0212 00       		.byte	0
+ 584 0213 0F       		.uleb128 0xf
+ 585 0214 5A000000 		.4byte	.LVL13
+ 586 0218 F2030000 		.4byte	0x3f2
+ 587 021c 28020000 		.4byte	0x228
+ 588 0220 10       		.uleb128 0x10
+ 589 0221 01       		.uleb128 0x1
+ 590 0222 50       		.byte	0x50
+ 591 0223 03       		.uleb128 0x3
+ 592 0224 0A       		.byte	0xa
+ 593 0225 F401     		.2byte	0x1f4
+ 594 0227 00       		.byte	0
+ 595 0228 0F       		.uleb128 0xf
+ 596 0229 6A000000 		.4byte	.LVL15
+ 597 022d C6030000 		.4byte	0x3c6
+ 598 0231 3C020000 		.4byte	0x23c
+ 599 0235 10       		.uleb128 0x10
+ 600 0236 01       		.uleb128 0x1
+ 601 0237 50       		.byte	0x50
+ 602 0238 02       		.uleb128 0x2
+ 603 0239 08       		.byte	0x8
+ 604 023a 61       		.byte	0x61
+ 605 023b 00       		.byte	0
+ 606 023c 0F       		.uleb128 0xf
+ 607 023d 74000000 		.4byte	.LVL16
+ 608 0241 D1030000 		.4byte	0x3d1
+ 609 0245 55020000 		.4byte	0x255
+ 610 0249 10       		.uleb128 0x10
+ 611 024a 01       		.uleb128 0x1
+ 612 024b 50       		.byte	0x50
+ 613 024c 02       		.uleb128 0x2
+ 614 024d 75       		.byte	0x75
+ 615 024e 00       		.sleb128 0
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 14
+
+
+ 616 024f 10       		.uleb128 0x10
+ 617 0250 01       		.uleb128 0x1
+ 618 0251 51       		.byte	0x51
+ 619 0252 01       		.uleb128 0x1
+ 620 0253 30       		.byte	0x30
+ 621 0254 00       		.byte	0
+ 622 0255 11       		.uleb128 0x11
+ 623 0256 80000000 		.4byte	.LVL19
+ 624 025a DC030000 		.4byte	0x3dc
+ 625 025e 0F       		.uleb128 0xf
+ 626 025f 8A000000 		.4byte	.LVL20
+ 627 0263 E7030000 		.4byte	0x3e7
+ 628 0267 71020000 		.4byte	0x271
+ 629 026b 10       		.uleb128 0x10
+ 630 026c 01       		.uleb128 0x1
+ 631 026d 50       		.byte	0x50
+ 632 026e 01       		.uleb128 0x1
+ 633 026f 31       		.byte	0x31
+ 634 0270 00       		.byte	0
+ 635 0271 0F       		.uleb128 0xf
+ 636 0272 92000000 		.4byte	.LVL21
+ 637 0276 F2030000 		.4byte	0x3f2
+ 638 027a 86020000 		.4byte	0x286
+ 639 027e 10       		.uleb128 0x10
+ 640 027f 01       		.uleb128 0x1
+ 641 0280 50       		.byte	0x50
+ 642 0281 03       		.uleb128 0x3
+ 643 0282 0A       		.byte	0xa
+ 644 0283 F401     		.2byte	0x1f4
+ 645 0285 00       		.byte	0
+ 646 0286 0F       		.uleb128 0xf
+ 647 0287 A2000000 		.4byte	.LVL23
+ 648 028b C6030000 		.4byte	0x3c6
+ 649 028f 9A020000 		.4byte	0x29a
+ 650 0293 10       		.uleb128 0x10
+ 651 0294 01       		.uleb128 0x1
+ 652 0295 50       		.byte	0x50
+ 653 0296 02       		.uleb128 0x2
+ 654 0297 08       		.byte	0x8
+ 655 0298 5E       		.byte	0x5e
+ 656 0299 00       		.byte	0
+ 657 029a 0F       		.uleb128 0xf
+ 658 029b AC000000 		.4byte	.LVL24
+ 659 029f D1030000 		.4byte	0x3d1
+ 660 02a3 B3020000 		.4byte	0x2b3
+ 661 02a7 10       		.uleb128 0x10
+ 662 02a8 01       		.uleb128 0x1
+ 663 02a9 50       		.byte	0x50
+ 664 02aa 02       		.uleb128 0x2
+ 665 02ab 75       		.byte	0x75
+ 666 02ac 00       		.sleb128 0
+ 667 02ad 10       		.uleb128 0x10
+ 668 02ae 01       		.uleb128 0x1
+ 669 02af 51       		.byte	0x51
+ 670 02b0 01       		.uleb128 0x1
+ 671 02b1 30       		.byte	0x30
+ 672 02b2 00       		.byte	0
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 15
+
+
+ 673 02b3 11       		.uleb128 0x11
+ 674 02b4 B8000000 		.4byte	.LVL27
+ 675 02b8 DC030000 		.4byte	0x3dc
+ 676 02bc 0F       		.uleb128 0xf
+ 677 02bd C2000000 		.4byte	.LVL28
+ 678 02c1 E7030000 		.4byte	0x3e7
+ 679 02c5 CF020000 		.4byte	0x2cf
+ 680 02c9 10       		.uleb128 0x10
+ 681 02ca 01       		.uleb128 0x1
+ 682 02cb 50       		.byte	0x50
+ 683 02cc 01       		.uleb128 0x1
+ 684 02cd 31       		.byte	0x31
+ 685 02ce 00       		.byte	0
+ 686 02cf 0F       		.uleb128 0xf
+ 687 02d0 CA000000 		.4byte	.LVL29
+ 688 02d4 F2030000 		.4byte	0x3f2
+ 689 02d8 E4020000 		.4byte	0x2e4
+ 690 02dc 10       		.uleb128 0x10
+ 691 02dd 01       		.uleb128 0x1
+ 692 02de 50       		.byte	0x50
+ 693 02df 03       		.uleb128 0x3
+ 694 02e0 0A       		.byte	0xa
+ 695 02e1 F401     		.2byte	0x1f4
+ 696 02e3 00       		.byte	0
+ 697 02e4 0F       		.uleb128 0xf
+ 698 02e5 DA000000 		.4byte	.LVL31
+ 699 02e9 C6030000 		.4byte	0x3c6
+ 700 02ed F8020000 		.4byte	0x2f8
+ 701 02f1 10       		.uleb128 0x10
+ 702 02f2 01       		.uleb128 0x1
+ 703 02f3 50       		.byte	0x50
+ 704 02f4 02       		.uleb128 0x2
+ 705 02f5 08       		.byte	0x8
+ 706 02f6 61       		.byte	0x61
+ 707 02f7 00       		.byte	0
+ 708 02f8 0F       		.uleb128 0xf
+ 709 02f9 E4000000 		.4byte	.LVL32
+ 710 02fd D1030000 		.4byte	0x3d1
+ 711 0301 11030000 		.4byte	0x311
+ 712 0305 10       		.uleb128 0x10
+ 713 0306 01       		.uleb128 0x1
+ 714 0307 50       		.byte	0x50
+ 715 0308 02       		.uleb128 0x2
+ 716 0309 75       		.byte	0x75
+ 717 030a 00       		.sleb128 0
+ 718 030b 10       		.uleb128 0x10
+ 719 030c 01       		.uleb128 0x1
+ 720 030d 51       		.byte	0x51
+ 721 030e 01       		.uleb128 0x1
+ 722 030f 30       		.byte	0x30
+ 723 0310 00       		.byte	0
+ 724 0311 11       		.uleb128 0x11
+ 725 0312 F0000000 		.4byte	.LVL35
+ 726 0316 DC030000 		.4byte	0x3dc
+ 727 031a 0F       		.uleb128 0xf
+ 728 031b FA000000 		.4byte	.LVL36
+ 729 031f E7030000 		.4byte	0x3e7
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 16
+
+
+ 730 0323 2D030000 		.4byte	0x32d
+ 731 0327 10       		.uleb128 0x10
+ 732 0328 01       		.uleb128 0x1
+ 733 0329 50       		.byte	0x50
+ 734 032a 01       		.uleb128 0x1
+ 735 032b 31       		.byte	0x31
+ 736 032c 00       		.byte	0
+ 737 032d 12       		.uleb128 0x12
+ 738 032e 02010000 		.4byte	.LVL37
+ 739 0332 F2030000 		.4byte	0x3f2
+ 740 0336 10       		.uleb128 0x10
+ 741 0337 01       		.uleb128 0x1
+ 742 0338 50       		.byte	0x50
+ 743 0339 03       		.uleb128 0x3
+ 744 033a 0A       		.byte	0xa
+ 745 033b F401     		.2byte	0x1f4
+ 746 033d 00       		.byte	0
+ 747 033e 00       		.byte	0
+ 748 033f 12       		.uleb128 0x12
+ 749 0340 0A000000 		.4byte	.LVL3
+ 750 0344 FD030000 		.4byte	0x3fd
+ 751 0348 10       		.uleb128 0x10
+ 752 0349 01       		.uleb128 0x1
+ 753 034a 50       		.byte	0x50
+ 754 034b 01       		.uleb128 0x1
+ 755 034c 30       		.byte	0x30
+ 756 034d 00       		.byte	0
+ 757 034e 00       		.byte	0
+ 758 034f 13       		.uleb128 0x13
+ 759 0350 5A030000 		.4byte	0x35a
+ 760 0354 5A030000 		.4byte	0x35a
+ 761 0358 14       		.uleb128 0x14
+ 762 0359 00       		.byte	0
+ 763 035a 15       		.uleb128 0x15
+ 764 035b 77000000 		.4byte	0x77
+ 765 035f 15       		.uleb128 0x15
+ 766 0360 4F030000 		.4byte	0x34f
+ 767 0364 13       		.uleb128 0x13
+ 768 0365 6B000000 		.4byte	0x6b
+ 769 0369 74030000 		.4byte	0x374
+ 770 036d 16       		.uleb128 0x16
+ 771 036e A4000000 		.4byte	0xa4
+ 772 0372 0C       		.byte	0xc
+ 773 0373 00       		.byte	0
+ 774 0374 13       		.uleb128 0x13
+ 775 0375 6B000000 		.4byte	0x6b
+ 776 0379 84030000 		.4byte	0x384
+ 777 037d 16       		.uleb128 0x16
+ 778 037e A4000000 		.4byte	0xa4
+ 779 0382 09       		.byte	0x9
+ 780 0383 00       		.byte	0
+ 781 0384 17       		.uleb128 0x17
+ 782 0385 19010000 		.4byte	.LASF38
+ 783 0389 01       		.byte	0x1
+ 784 038a 0E       		.byte	0xe
+ 785 038b 5D000000 		.4byte	0x5d
+ 786 038f 00000000 		.4byte	.LFB35
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 17
+
+
+ 787 0393 14000000 		.4byte	.LFE35-.LFB35
+ 788 0397 01       		.uleb128 0x1
+ 789 0398 9C       		.byte	0x9c
+ 790 0399 BD030000 		.4byte	0x3bd
+ 791 039d 11       		.uleb128 0x11
+ 792 039e 08000000 		.4byte	.LVL38
+ 793 03a2 08040000 		.4byte	0x408
+ 794 03a6 12       		.uleb128 0x12
+ 795 03a7 10000000 		.4byte	.LVL39
+ 796 03ab B2000000 		.4byte	0xb2
+ 797 03af 10       		.uleb128 0x10
+ 798 03b0 01       		.uleb128 0x1
+ 799 03b1 50       		.byte	0x50
+ 800 03b2 01       		.uleb128 0x1
+ 801 03b3 30       		.byte	0x30
+ 802 03b4 10       		.uleb128 0x10
+ 803 03b5 01       		.uleb128 0x1
+ 804 03b6 51       		.byte	0x51
+ 805 03b7 03       		.uleb128 0x3
+ 806 03b8 0A       		.byte	0xa
+ 807 03b9 1027     		.2byte	0x2710
+ 808 03bb 00       		.byte	0
+ 809 03bc 00       		.byte	0
+ 810 03bd 18       		.uleb128 0x18
+ 811 03be FD010000 		.4byte	.LASF39
+ 812 03c2 FD010000 		.4byte	.LASF39
+ 813 03c6 19       		.uleb128 0x19
+ 814 03c7 42000000 		.4byte	.LASF26
+ 815 03cb 42000000 		.4byte	.LASF26
+ 816 03cf 03       		.byte	0x3
+ 817 03d0 27       		.byte	0x27
+ 818 03d1 19       		.uleb128 0x19
+ 819 03d2 05000000 		.4byte	.LASF27
+ 820 03d6 05000000 		.4byte	.LASF27
+ 821 03da 03       		.byte	0x3
+ 822 03db 23       		.byte	0x23
+ 823 03dc 19       		.uleb128 0x19
+ 824 03dd 04020000 		.4byte	.LASF28
+ 825 03e1 04020000 		.4byte	.LASF28
+ 826 03e5 03       		.byte	0x3
+ 827 03e6 1B       		.byte	0x1b
+ 828 03e7 19       		.uleb128 0x19
+ 829 03e8 67020000 		.4byte	.LASF29
+ 830 03ec 67020000 		.4byte	.LASF29
+ 831 03f0 03       		.byte	0x3
+ 832 03f1 1A       		.byte	0x1a
+ 833 03f2 19       		.uleb128 0x19
+ 834 03f3 7B020000 		.4byte	.LASF30
+ 835 03f7 7B020000 		.4byte	.LASF30
+ 836 03fb 04       		.byte	0x4
+ 837 03fc D9       		.byte	0xd9
+ 838 03fd 19       		.uleb128 0x19
+ 839 03fe 2E020000 		.4byte	.LASF31
+ 840 0402 2E020000 		.4byte	.LASF31
+ 841 0406 03       		.byte	0x3
+ 842 0407 26       		.byte	0x26
+ 843 0408 19       		.uleb128 0x19
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 18
+
+
+ 844 0409 17000000 		.4byte	.LASF32
+ 845 040d 17000000 		.4byte	.LASF32
+ 846 0411 03       		.byte	0x3
+ 847 0412 15       		.byte	0x15
+ 848 0413 00       		.byte	0
+ 849              		.section	.debug_abbrev,"",%progbits
+ 850              	.Ldebug_abbrev0:
+ 851 0000 01       		.uleb128 0x1
+ 852 0001 11       		.uleb128 0x11
+ 853 0002 01       		.byte	0x1
+ 854 0003 25       		.uleb128 0x25
+ 855 0004 0E       		.uleb128 0xe
+ 856 0005 13       		.uleb128 0x13
+ 857 0006 0B       		.uleb128 0xb
+ 858 0007 03       		.uleb128 0x3
+ 859 0008 0E       		.uleb128 0xe
+ 860 0009 1B       		.uleb128 0x1b
+ 861 000a 0E       		.uleb128 0xe
+ 862 000b 55       		.uleb128 0x55
+ 863 000c 17       		.uleb128 0x17
+ 864 000d 11       		.uleb128 0x11
+ 865 000e 01       		.uleb128 0x1
+ 866 000f 10       		.uleb128 0x10
+ 867 0010 17       		.uleb128 0x17
+ 868 0011 00       		.byte	0
+ 869 0012 00       		.byte	0
+ 870 0013 02       		.uleb128 0x2
+ 871 0014 24       		.uleb128 0x24
+ 872 0015 00       		.byte	0
+ 873 0016 0B       		.uleb128 0xb
+ 874 0017 0B       		.uleb128 0xb
+ 875 0018 3E       		.uleb128 0x3e
+ 876 0019 0B       		.uleb128 0xb
+ 877 001a 03       		.uleb128 0x3
+ 878 001b 0E       		.uleb128 0xe
+ 879 001c 00       		.byte	0
+ 880 001d 00       		.byte	0
+ 881 001e 03       		.uleb128 0x3
+ 882 001f 24       		.uleb128 0x24
+ 883 0020 00       		.byte	0
+ 884 0021 0B       		.uleb128 0xb
+ 885 0022 0B       		.uleb128 0xb
+ 886 0023 3E       		.uleb128 0x3e
+ 887 0024 0B       		.uleb128 0xb
+ 888 0025 03       		.uleb128 0x3
+ 889 0026 08       		.uleb128 0x8
+ 890 0027 00       		.byte	0
+ 891 0028 00       		.byte	0
+ 892 0029 04       		.uleb128 0x4
+ 893 002a 16       		.uleb128 0x16
+ 894 002b 00       		.byte	0
+ 895 002c 03       		.uleb128 0x3
+ 896 002d 0E       		.uleb128 0xe
+ 897 002e 3A       		.uleb128 0x3a
+ 898 002f 0B       		.uleb128 0xb
+ 899 0030 3B       		.uleb128 0x3b
+ 900 0031 05       		.uleb128 0x5
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 19
+
+
+ 901 0032 49       		.uleb128 0x49
+ 902 0033 13       		.uleb128 0x13
+ 903 0034 00       		.byte	0
+ 904 0035 00       		.byte	0
+ 905 0036 05       		.uleb128 0x5
+ 906 0037 2E       		.uleb128 0x2e
+ 907 0038 01       		.byte	0x1
+ 908 0039 3F       		.uleb128 0x3f
+ 909 003a 19       		.uleb128 0x19
+ 910 003b 03       		.uleb128 0x3
+ 911 003c 0E       		.uleb128 0xe
+ 912 003d 3A       		.uleb128 0x3a
+ 913 003e 0B       		.uleb128 0xb
+ 914 003f 3B       		.uleb128 0x3b
+ 915 0040 0B       		.uleb128 0xb
+ 916 0041 27       		.uleb128 0x27
+ 917 0042 19       		.uleb128 0x19
+ 918 0043 8701     		.uleb128 0x87
+ 919 0045 19       		.uleb128 0x19
+ 920 0046 11       		.uleb128 0x11
+ 921 0047 01       		.uleb128 0x1
+ 922 0048 12       		.uleb128 0x12
+ 923 0049 06       		.uleb128 0x6
+ 924 004a 40       		.uleb128 0x40
+ 925 004b 18       		.uleb128 0x18
+ 926 004c 9742     		.uleb128 0x2117
+ 927 004e 19       		.uleb128 0x19
+ 928 004f 01       		.uleb128 0x1
+ 929 0050 13       		.uleb128 0x13
+ 930 0051 00       		.byte	0
+ 931 0052 00       		.byte	0
+ 932 0053 06       		.uleb128 0x6
+ 933 0054 05       		.uleb128 0x5
+ 934 0055 00       		.byte	0
+ 935 0056 03       		.uleb128 0x3
+ 936 0057 0E       		.uleb128 0xe
+ 937 0058 3A       		.uleb128 0x3a
+ 938 0059 0B       		.uleb128 0xb
+ 939 005a 3B       		.uleb128 0x3b
+ 940 005b 0B       		.uleb128 0xb
+ 941 005c 49       		.uleb128 0x49
+ 942 005d 13       		.uleb128 0x13
+ 943 005e 02       		.uleb128 0x2
+ 944 005f 17       		.uleb128 0x17
+ 945 0060 00       		.byte	0
+ 946 0061 00       		.byte	0
+ 947 0062 07       		.uleb128 0x7
+ 948 0063 34       		.uleb128 0x34
+ 949 0064 00       		.byte	0
+ 950 0065 03       		.uleb128 0x3
+ 951 0066 0E       		.uleb128 0xe
+ 952 0067 3A       		.uleb128 0x3a
+ 953 0068 0B       		.uleb128 0xb
+ 954 0069 3B       		.uleb128 0x3b
+ 955 006a 0B       		.uleb128 0xb
+ 956 006b 49       		.uleb128 0x49
+ 957 006c 13       		.uleb128 0x13
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 20
+
+
+ 958 006d 1C       		.uleb128 0x1c
+ 959 006e 0B       		.uleb128 0xb
+ 960 006f 00       		.byte	0
+ 961 0070 00       		.byte	0
+ 962 0071 08       		.uleb128 0x8
+ 963 0072 34       		.uleb128 0x34
+ 964 0073 00       		.byte	0
+ 965 0074 03       		.uleb128 0x3
+ 966 0075 08       		.uleb128 0x8
+ 967 0076 3A       		.uleb128 0x3a
+ 968 0077 0B       		.uleb128 0xb
+ 969 0078 3B       		.uleb128 0x3b
+ 970 0079 0B       		.uleb128 0xb
+ 971 007a 49       		.uleb128 0x49
+ 972 007b 13       		.uleb128 0x13
+ 973 007c 1C       		.uleb128 0x1c
+ 974 007d 0B       		.uleb128 0xb
+ 975 007e 00       		.byte	0
+ 976 007f 00       		.byte	0
+ 977 0080 09       		.uleb128 0x9
+ 978 0081 34       		.uleb128 0x34
+ 979 0082 00       		.byte	0
+ 980 0083 03       		.uleb128 0x3
+ 981 0084 0E       		.uleb128 0xe
+ 982 0085 3A       		.uleb128 0x3a
+ 983 0086 0B       		.uleb128 0xb
+ 984 0087 3B       		.uleb128 0x3b
+ 985 0088 0B       		.uleb128 0xb
+ 986 0089 49       		.uleb128 0x49
+ 987 008a 13       		.uleb128 0x13
+ 988 008b 00       		.byte	0
+ 989 008c 00       		.byte	0
+ 990 008d 0A       		.uleb128 0xa
+ 991 008e 34       		.uleb128 0x34
+ 992 008f 00       		.byte	0
+ 993 0090 03       		.uleb128 0x3
+ 994 0091 0E       		.uleb128 0xe
+ 995 0092 3A       		.uleb128 0x3a
+ 996 0093 0B       		.uleb128 0xb
+ 997 0094 3B       		.uleb128 0x3b
+ 998 0095 0B       		.uleb128 0xb
+ 999 0096 49       		.uleb128 0x49
+ 1000 0097 13       		.uleb128 0x13
+ 1001 0098 3F       		.uleb128 0x3f
+ 1002 0099 19       		.uleb128 0x19
+ 1003 009a 3C       		.uleb128 0x3c
+ 1004 009b 19       		.uleb128 0x19
+ 1005 009c 00       		.byte	0
+ 1006 009d 00       		.byte	0
+ 1007 009e 0B       		.uleb128 0xb
+ 1008 009f 0B       		.uleb128 0xb
+ 1009 00a0 01       		.byte	0x1
+ 1010 00a1 11       		.uleb128 0x11
+ 1011 00a2 01       		.uleb128 0x1
+ 1012 00a3 12       		.uleb128 0x12
+ 1013 00a4 06       		.uleb128 0x6
+ 1014 00a5 01       		.uleb128 0x1
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 21
+
+
+ 1015 00a6 13       		.uleb128 0x13
+ 1016 00a7 00       		.byte	0
+ 1017 00a8 00       		.byte	0
+ 1018 00a9 0C       		.uleb128 0xc
+ 1019 00aa 34       		.uleb128 0x34
+ 1020 00ab 00       		.byte	0
+ 1021 00ac 03       		.uleb128 0x3
+ 1022 00ad 08       		.uleb128 0x8
+ 1023 00ae 3A       		.uleb128 0x3a
+ 1024 00af 0B       		.uleb128 0xb
+ 1025 00b0 3B       		.uleb128 0x3b
+ 1026 00b1 0B       		.uleb128 0xb
+ 1027 00b2 49       		.uleb128 0x49
+ 1028 00b3 13       		.uleb128 0x13
+ 1029 00b4 00       		.byte	0
+ 1030 00b5 00       		.byte	0
+ 1031 00b6 0D       		.uleb128 0xd
+ 1032 00b7 34       		.uleb128 0x34
+ 1033 00b8 00       		.byte	0
+ 1034 00b9 03       		.uleb128 0x3
+ 1035 00ba 0E       		.uleb128 0xe
+ 1036 00bb 3A       		.uleb128 0x3a
+ 1037 00bc 0B       		.uleb128 0xb
+ 1038 00bd 3B       		.uleb128 0x3b
+ 1039 00be 0B       		.uleb128 0xb
+ 1040 00bf 49       		.uleb128 0x49
+ 1041 00c0 13       		.uleb128 0x13
+ 1042 00c1 02       		.uleb128 0x2
+ 1043 00c2 18       		.uleb128 0x18
+ 1044 00c3 00       		.byte	0
+ 1045 00c4 00       		.byte	0
+ 1046 00c5 0E       		.uleb128 0xe
+ 1047 00c6 34       		.uleb128 0x34
+ 1048 00c7 00       		.byte	0
+ 1049 00c8 03       		.uleb128 0x3
+ 1050 00c9 08       		.uleb128 0x8
+ 1051 00ca 3A       		.uleb128 0x3a
+ 1052 00cb 0B       		.uleb128 0xb
+ 1053 00cc 3B       		.uleb128 0x3b
+ 1054 00cd 0B       		.uleb128 0xb
+ 1055 00ce 49       		.uleb128 0x49
+ 1056 00cf 13       		.uleb128 0x13
+ 1057 00d0 02       		.uleb128 0x2
+ 1058 00d1 17       		.uleb128 0x17
+ 1059 00d2 00       		.byte	0
+ 1060 00d3 00       		.byte	0
+ 1061 00d4 0F       		.uleb128 0xf
+ 1062 00d5 898201   		.uleb128 0x4109
+ 1063 00d8 01       		.byte	0x1
+ 1064 00d9 11       		.uleb128 0x11
+ 1065 00da 01       		.uleb128 0x1
+ 1066 00db 31       		.uleb128 0x31
+ 1067 00dc 13       		.uleb128 0x13
+ 1068 00dd 01       		.uleb128 0x1
+ 1069 00de 13       		.uleb128 0x13
+ 1070 00df 00       		.byte	0
+ 1071 00e0 00       		.byte	0
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 22
+
+
+ 1072 00e1 10       		.uleb128 0x10
+ 1073 00e2 8A8201   		.uleb128 0x410a
+ 1074 00e5 00       		.byte	0
+ 1075 00e6 02       		.uleb128 0x2
+ 1076 00e7 18       		.uleb128 0x18
+ 1077 00e8 9142     		.uleb128 0x2111
+ 1078 00ea 18       		.uleb128 0x18
+ 1079 00eb 00       		.byte	0
+ 1080 00ec 00       		.byte	0
+ 1081 00ed 11       		.uleb128 0x11
+ 1082 00ee 898201   		.uleb128 0x4109
+ 1083 00f1 00       		.byte	0
+ 1084 00f2 11       		.uleb128 0x11
+ 1085 00f3 01       		.uleb128 0x1
+ 1086 00f4 31       		.uleb128 0x31
+ 1087 00f5 13       		.uleb128 0x13
+ 1088 00f6 00       		.byte	0
+ 1089 00f7 00       		.byte	0
+ 1090 00f8 12       		.uleb128 0x12
+ 1091 00f9 898201   		.uleb128 0x4109
+ 1092 00fc 01       		.byte	0x1
+ 1093 00fd 11       		.uleb128 0x11
+ 1094 00fe 01       		.uleb128 0x1
+ 1095 00ff 31       		.uleb128 0x31
+ 1096 0100 13       		.uleb128 0x13
+ 1097 0101 00       		.byte	0
+ 1098 0102 00       		.byte	0
+ 1099 0103 13       		.uleb128 0x13
+ 1100 0104 01       		.uleb128 0x1
+ 1101 0105 01       		.byte	0x1
+ 1102 0106 49       		.uleb128 0x49
+ 1103 0107 13       		.uleb128 0x13
+ 1104 0108 01       		.uleb128 0x1
+ 1105 0109 13       		.uleb128 0x13
+ 1106 010a 00       		.byte	0
+ 1107 010b 00       		.byte	0
+ 1108 010c 14       		.uleb128 0x14
+ 1109 010d 21       		.uleb128 0x21
+ 1110 010e 00       		.byte	0
+ 1111 010f 00       		.byte	0
+ 1112 0110 00       		.byte	0
+ 1113 0111 15       		.uleb128 0x15
+ 1114 0112 26       		.uleb128 0x26
+ 1115 0113 00       		.byte	0
+ 1116 0114 49       		.uleb128 0x49
+ 1117 0115 13       		.uleb128 0x13
+ 1118 0116 00       		.byte	0
+ 1119 0117 00       		.byte	0
+ 1120 0118 16       		.uleb128 0x16
+ 1121 0119 21       		.uleb128 0x21
+ 1122 011a 00       		.byte	0
+ 1123 011b 49       		.uleb128 0x49
+ 1124 011c 13       		.uleb128 0x13
+ 1125 011d 2F       		.uleb128 0x2f
+ 1126 011e 0B       		.uleb128 0xb
+ 1127 011f 00       		.byte	0
+ 1128 0120 00       		.byte	0
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 23
+
+
+ 1129 0121 17       		.uleb128 0x17
+ 1130 0122 2E       		.uleb128 0x2e
+ 1131 0123 01       		.byte	0x1
+ 1132 0124 3F       		.uleb128 0x3f
+ 1133 0125 19       		.uleb128 0x19
+ 1134 0126 03       		.uleb128 0x3
+ 1135 0127 0E       		.uleb128 0xe
+ 1136 0128 3A       		.uleb128 0x3a
+ 1137 0129 0B       		.uleb128 0xb
+ 1138 012a 3B       		.uleb128 0x3b
+ 1139 012b 0B       		.uleb128 0xb
+ 1140 012c 27       		.uleb128 0x27
+ 1141 012d 19       		.uleb128 0x19
+ 1142 012e 49       		.uleb128 0x49
+ 1143 012f 13       		.uleb128 0x13
+ 1144 0130 8701     		.uleb128 0x87
+ 1145 0132 19       		.uleb128 0x19
+ 1146 0133 11       		.uleb128 0x11
+ 1147 0134 01       		.uleb128 0x1
+ 1148 0135 12       		.uleb128 0x12
+ 1149 0136 06       		.uleb128 0x6
+ 1150 0137 40       		.uleb128 0x40
+ 1151 0138 18       		.uleb128 0x18
+ 1152 0139 9742     		.uleb128 0x2117
+ 1153 013b 19       		.uleb128 0x19
+ 1154 013c 01       		.uleb128 0x1
+ 1155 013d 13       		.uleb128 0x13
+ 1156 013e 00       		.byte	0
+ 1157 013f 00       		.byte	0
+ 1158 0140 18       		.uleb128 0x18
+ 1159 0141 2E       		.uleb128 0x2e
+ 1160 0142 00       		.byte	0
+ 1161 0143 3F       		.uleb128 0x3f
+ 1162 0144 19       		.uleb128 0x19
+ 1163 0145 3C       		.uleb128 0x3c
+ 1164 0146 19       		.uleb128 0x19
+ 1165 0147 6E       		.uleb128 0x6e
+ 1166 0148 0E       		.uleb128 0xe
+ 1167 0149 03       		.uleb128 0x3
+ 1168 014a 0E       		.uleb128 0xe
+ 1169 014b 00       		.byte	0
+ 1170 014c 00       		.byte	0
+ 1171 014d 19       		.uleb128 0x19
+ 1172 014e 2E       		.uleb128 0x2e
+ 1173 014f 00       		.byte	0
+ 1174 0150 3F       		.uleb128 0x3f
+ 1175 0151 19       		.uleb128 0x19
+ 1176 0152 3C       		.uleb128 0x3c
+ 1177 0153 19       		.uleb128 0x19
+ 1178 0154 6E       		.uleb128 0x6e
+ 1179 0155 0E       		.uleb128 0xe
+ 1180 0156 03       		.uleb128 0x3
+ 1181 0157 0E       		.uleb128 0xe
+ 1182 0158 3A       		.uleb128 0x3a
+ 1183 0159 0B       		.uleb128 0xb
+ 1184 015a 3B       		.uleb128 0x3b
+ 1185 015b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 24
+
+
+ 1186 015c 00       		.byte	0
+ 1187 015d 00       		.byte	0
+ 1188 015e 00       		.byte	0
+ 1189              		.section	.debug_loc,"",%progbits
+ 1190              	.Ldebug_loc0:
+ 1191              	.LLST0:
+ 1192 0000 00000000 		.4byte	.LVL0
+ 1193 0004 06000000 		.4byte	.LVL2
+ 1194 0008 0100     		.2byte	0x1
+ 1195 000a 50       		.byte	0x50
+ 1196 000b 06000000 		.4byte	.LVL2
+ 1197 000f 08010000 		.4byte	.LFE36
+ 1198 0013 0400     		.2byte	0x4
+ 1199 0015 F3       		.byte	0xf3
+ 1200 0016 01       		.uleb128 0x1
+ 1201 0017 50       		.byte	0x50
+ 1202 0018 9F       		.byte	0x9f
+ 1203 0019 00000000 		.4byte	0
+ 1204 001d 00000000 		.4byte	0
+ 1205              	.LLST1:
+ 1206 0021 00000000 		.4byte	.LVL0
+ 1207 0025 09000000 		.4byte	.LVL3-1
+ 1208 0029 0100     		.2byte	0x1
+ 1209 002b 51       		.byte	0x51
+ 1210 002c 09000000 		.4byte	.LVL3-1
+ 1211 0030 08010000 		.4byte	.LFE36
+ 1212 0034 0400     		.2byte	0x4
+ 1213 0036 F3       		.byte	0xf3
+ 1214 0037 01       		.uleb128 0x1
+ 1215 0038 51       		.byte	0x51
+ 1216 0039 9F       		.byte	0x9f
+ 1217 003a 00000000 		.4byte	0
+ 1218 003e 00000000 		.4byte	0
+ 1219              	.LLST2:
+ 1220 0042 22000000 		.4byte	.LVL5
+ 1221 0046 26000000 		.4byte	.LVL6
+ 1222 004a 0200     		.2byte	0x2
+ 1223 004c 30       		.byte	0x30
+ 1224 004d 9F       		.byte	0x9f
+ 1225 004e 26000000 		.4byte	.LVL6
+ 1226 0052 3E000000 		.4byte	.LVL9
+ 1227 0056 0100     		.2byte	0x1
+ 1228 0058 54       		.byte	0x54
+ 1229 0059 40000000 		.4byte	.LVL10
+ 1230 005d 5A000000 		.4byte	.LVL13
+ 1231 0061 0100     		.2byte	0x1
+ 1232 0063 54       		.byte	0x54
+ 1233 0064 5A000000 		.4byte	.LVL13
+ 1234 0068 5E000000 		.4byte	.LVL14
+ 1235 006c 0200     		.2byte	0x2
+ 1236 006e 30       		.byte	0x30
+ 1237 006f 9F       		.byte	0x9f
+ 1238 0070 5E000000 		.4byte	.LVL14
+ 1239 0074 76000000 		.4byte	.LVL17
+ 1240 0078 0100     		.2byte	0x1
+ 1241 007a 54       		.byte	0x54
+ 1242 007b 78000000 		.4byte	.LVL18
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 25
+
+
+ 1243 007f 92000000 		.4byte	.LVL21
+ 1244 0083 0100     		.2byte	0x1
+ 1245 0085 54       		.byte	0x54
+ 1246 0086 92000000 		.4byte	.LVL21
+ 1247 008a 96000000 		.4byte	.LVL22
+ 1248 008e 0200     		.2byte	0x2
+ 1249 0090 30       		.byte	0x30
+ 1250 0091 9F       		.byte	0x9f
+ 1251 0092 96000000 		.4byte	.LVL22
+ 1252 0096 AE000000 		.4byte	.LVL25
+ 1253 009a 0100     		.2byte	0x1
+ 1254 009c 54       		.byte	0x54
+ 1255 009d B0000000 		.4byte	.LVL26
+ 1256 00a1 CA000000 		.4byte	.LVL29
+ 1257 00a5 0100     		.2byte	0x1
+ 1258 00a7 54       		.byte	0x54
+ 1259 00a8 CA000000 		.4byte	.LVL29
+ 1260 00ac CE000000 		.4byte	.LVL30
+ 1261 00b0 0200     		.2byte	0x2
+ 1262 00b2 30       		.byte	0x30
+ 1263 00b3 9F       		.byte	0x9f
+ 1264 00b4 CE000000 		.4byte	.LVL30
+ 1265 00b8 E6000000 		.4byte	.LVL33
+ 1266 00bc 0100     		.2byte	0x1
+ 1267 00be 54       		.byte	0x54
+ 1268 00bf E8000000 		.4byte	.LVL34
+ 1269 00c3 08010000 		.4byte	.LFE36
+ 1270 00c7 0100     		.2byte	0x1
+ 1271 00c9 54       		.byte	0x54
+ 1272 00ca 00000000 		.4byte	0
+ 1273 00ce 00000000 		.4byte	0
+ 1274              		.section	.debug_aranges,"",%progbits
+ 1275 0000 24000000 		.4byte	0x24
+ 1276 0004 0200     		.2byte	0x2
+ 1277 0006 00000000 		.4byte	.Ldebug_info0
+ 1278 000a 04       		.byte	0x4
+ 1279 000b 00       		.byte	0
+ 1280 000c 0000     		.2byte	0
+ 1281 000e 0000     		.2byte	0
+ 1282 0010 00000000 		.4byte	.LFB36
+ 1283 0014 08010000 		.4byte	.LFE36-.LFB36
+ 1284 0018 00000000 		.4byte	.LFB35
+ 1285 001c 14000000 		.4byte	.LFE35-.LFB35
+ 1286 0020 00000000 		.4byte	0
+ 1287 0024 00000000 		.4byte	0
+ 1288              		.section	.debug_ranges,"",%progbits
+ 1289              	.Ldebug_ranges0:
+ 1290 0000 00000000 		.4byte	.LFB36
+ 1291 0004 08010000 		.4byte	.LFE36
+ 1292 0008 00000000 		.4byte	.LFB35
+ 1293 000c 14000000 		.4byte	.LFE35
+ 1294 0010 00000000 		.4byte	0
+ 1295 0014 00000000 		.4byte	0
+ 1296              		.section	.debug_line,"",%progbits
+ 1297              	.Ldebug_line0:
+ 1298 0000 BA000000 		.section	.debug_str,"MS",%progbits,1
+ 1298      02005D00 
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 26
+
+
+ 1298      00000201 
+ 1298      FB0E0D00 
+ 1298      01010101 
+ 1299              	.LASF14:
+ 1300 0000 63686172 		.ascii	"char\000"
+ 1300      00
+ 1301              	.LASF27:
+ 1302 0005 53747269 		.ascii	"StripLights_Pixel\000"
+ 1302      704C6967 
+ 1302      6874735F 
+ 1302      50697865 
+ 1302      6C00
+ 1303              	.LASF32:
+ 1304 0017 53747269 		.ascii	"StripLights_Start\000"
+ 1304      704C6967 
+ 1304      6874735F 
+ 1304      53746172 
+ 1304      7400
+ 1305              	.LASF24:
+ 1306 0029 72696768 		.ascii	"right_arr\000"
+ 1306      745F6172 
+ 1306      7200
+ 1307              	.LASF36:
+ 1308 0033 536C6F77 		.ascii	"SlowColorBlend\000"
+ 1308      436F6C6F 
+ 1308      72426C65 
+ 1308      6E6400
+ 1309              	.LASF26:
+ 1310 0042 53747269 		.ascii	"StripLights_getColor\000"
+ 1310      704C6967 
+ 1310      6874735F 
+ 1310      67657443 
+ 1310      6F6C6F72 
+ 1311              	.LASF12:
+ 1312 0057 666C6F61 		.ascii	"float\000"
+ 1312      7400
+ 1313              	.LASF17:
+ 1314 005d 64656C61 		.ascii	"delay\000"
+ 1314      7900
+ 1315              	.LASF35:
+ 1316 0063 433A5C55 		.ascii	"C:\\Users\\alex\\Documents\\PSoC Creator\\FunWithLE"
+ 1316      73657273 
+ 1316      5C616C65 
+ 1316      785C446F 
+ 1316      63756D65 
+ 1317 0091 44735C4C 		.ascii	"Ds\\Library_example.cydsn\000"
+ 1317      69627261 
+ 1317      72795F65 
+ 1317      78616D70 
+ 1317      6C652E63 
+ 1318              	.LASF1:
+ 1319 00aa 756E7369 		.ascii	"unsigned char\000"
+ 1319      676E6564 
+ 1319      20636861 
+ 1319      7200
+ 1320              	.LASF11:
+ 1321 00b8 696E7431 		.ascii	"int16\000"
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 27
+
+
+ 1321      3600
+ 1322              	.LASF5:
+ 1323 00be 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1323      20756E73 
+ 1323      69676E65 
+ 1323      6420696E 
+ 1323      7400
+ 1324              	.LASF25:
+ 1325 00d0 6C656674 		.ascii	"left_arr\000"
+ 1325      5F617272 
+ 1325      00
+ 1326              	.LASF3:
+ 1327 00d9 73686F72 		.ascii	"short unsigned int\000"
+ 1327      7420756E 
+ 1327      7369676E 
+ 1327      65642069 
+ 1327      6E7400
+ 1328              	.LASF21:
+ 1329 00ec 746F436F 		.ascii	"toColor\000"
+ 1329      6C6F7200 
+ 1330              	.LASF13:
+ 1331 00f4 646F7562 		.ascii	"double\000"
+ 1331      6C6500
+ 1332              	.LASF2:
+ 1333 00fb 73686F72 		.ascii	"short int\000"
+ 1333      7420696E 
+ 1333      7400
+ 1334              	.LASF22:
+ 1335 0105 636F6C6F 		.ascii	"color\000"
+ 1335      7200
+ 1336              	.LASF9:
+ 1337 010b 75696E74 		.ascii	"uint16\000"
+ 1337      313600
+ 1338              	.LASF10:
+ 1339 0112 75696E74 		.ascii	"uint32\000"
+ 1339      333200
+ 1340              	.LASF38:
+ 1341 0119 6D61696E 		.ascii	"main\000"
+ 1341      00
+ 1342              	.LASF8:
+ 1343 011e 756E7369 		.ascii	"unsigned int\000"
+ 1343      676E6564 
+ 1343      20696E74 
+ 1343      00
+ 1344              	.LASF20:
+ 1345 012b 66726F6D 		.ascii	"fromColor\000"
+ 1345      436F6C6F 
+ 1345      7200
+ 1346              	.LASF7:
+ 1347 0135 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1347      206C6F6E 
+ 1347      6720756E 
+ 1347      7369676E 
+ 1347      65642069 
+ 1348              	.LASF18:
+ 1349 014c 74696D65 		.ascii	"time\000"
+ 1349      00
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 28
+
+
+ 1350              	.LASF33:
+ 1351 0151 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1351      43313120 
+ 1351      352E342E 
+ 1351      31203230 
+ 1351      31363036 
+ 1352 0184 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1352      20726576 
+ 1352      6973696F 
+ 1352      6E203233 
+ 1352      37373135 
+ 1353 01b7 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1353      66756E63 
+ 1353      74696F6E 
+ 1353      2D736563 
+ 1353      74696F6E 
+ 1354              	.LASF15:
+ 1355 01df 73697A65 		.ascii	"sizetype\000"
+ 1355      74797065 
+ 1355      00
+ 1356              	.LASF6:
+ 1357 01e8 6C6F6E67 		.ascii	"long long int\000"
+ 1357      206C6F6E 
+ 1357      6720696E 
+ 1357      7400
+ 1358              	.LASF34:
+ 1359 01f6 6D61696E 		.ascii	"main.c\000"
+ 1359      2E6300
+ 1360              	.LASF39:
+ 1361 01fd 6D656D63 		.ascii	"memcpy\000"
+ 1361      707900
+ 1362              	.LASF28:
+ 1363 0204 53747269 		.ascii	"StripLights_Ready\000"
+ 1363      704C6967 
+ 1363      6874735F 
+ 1363      52656164 
+ 1363      7900
+ 1364              	.LASF19:
+ 1365 0216 74696D65 		.ascii	"timeCnt\000"
+ 1365      436E7400 
+ 1366              	.LASF23:
+ 1367 021e 6C656E67 		.ascii	"length\000"
+ 1367      746800
+ 1368              	.LASF4:
+ 1369 0225 6C6F6E67 		.ascii	"long int\000"
+ 1369      20696E74 
+ 1369      00
+ 1370              	.LASF31:
+ 1371 022e 53747269 		.ascii	"StripLights_Dim\000"
+ 1371      704C6967 
+ 1371      6874735F 
+ 1371      44696D00 
+ 1372              	.LASF16:
+ 1373 023e 6C6F6E67 		.ascii	"long double\000"
+ 1373      20646F75 
+ 1373      626C6500 
+ 1374              	.LASF0:
+ARM GAS  C:\Users\alex\AppData\Local\Temp\ccDWRbTK.s 			page 29
+
+
+ 1375 024a 7369676E 		.ascii	"signed char\000"
+ 1375      65642063 
+ 1375      68617200 
+ 1376              	.LASF37:
+ 1377 0256 53747269 		.ascii	"StripLights_CLUT\000"
+ 1377      704C6967 
+ 1377      6874735F 
+ 1377      434C5554 
+ 1377      00
+ 1378              	.LASF29:
+ 1379 0267 53747269 		.ascii	"StripLights_Trigger\000"
+ 1379      704C6967 
+ 1379      6874735F 
+ 1379      54726967 
+ 1379      67657200 
+ 1380              	.LASF30:
+ 1381 027b 43794465 		.ascii	"CyDelay\000"
+ 1381      6C617900 
+ 1382              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
