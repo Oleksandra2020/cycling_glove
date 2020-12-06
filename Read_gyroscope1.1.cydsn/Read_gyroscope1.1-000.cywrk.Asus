@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\i2cFunctions.c">
 <ExpandedNodeIds>
 <v>Read_gyroscope1.1-000</v>
 <v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
@@ -44,43 +44,43 @@
 <v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Clock_1MHz</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Comp_0</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Comp_1</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CompM_0</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CompM_1</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CompP_0</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CompP_1</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\cy_boot</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\cy_dmac</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\cy_lfclk</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\DieTemp</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Down</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050.h</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_BOOT.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_BOOT.h</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C.h</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C_BOOT.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C_INT.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C_MASTER.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_I2C_PVT.h</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_PINS.h</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_PM.c</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_PVT.h</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050_SCB_IRQ</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050_SCBCLK</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050_scl</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050_sda</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Input_0_Int</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Input_1_Int</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Input_Pin_0</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Input_Pin_1</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\LPComp_Int</v>
-<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Output_Pin_0</v>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Pins</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Analog</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\DMA</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Clocks</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Interrupts</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\System</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Directives</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Flash Security</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\cyapicallbacks.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\mpu6050.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\i2cFunctions.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\main.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\mpu6050.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_0</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_1M</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_1P</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_2</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_2_Buffer</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_3</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_3_Buffer</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_EOC_Int</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_intClock</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\ADC_IRQ</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\BLE</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CapSense</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CapSense_SampleClk</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\CapSense_SenseClk</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -350,26 +350,14 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\Read_gyroscope1.1.cydwr" />
-<name v=".\cyapicallbacks.h" />
-<name v=".\Generated_Source\PSoC4\UART.c" />
-<name v=".\TopDesign\TopDesign.cysch" />
-<name v=".\mpu6050.c" />
-<name v=".\i2cFunctions.c" />
-<name v=".\main.c" />
-<name v=".\Generated_Source\PSoC4\I2C_MPU6050.c" />
-<name v=".\Generated_Source\PSoC4\I2C_MPU6050.h" />
-<name v=".\Generated_Source\PSoC4\I2C_MPU6050_I2C.h" />
-<name v=".\Generated_Source\PSoC4\I2C_MPU6050_I2C.c" />
-</OpenDocs>
+<OpenDocs />
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="925, 523" SelectedTabbedMdiWindow="d3ad4a96-d747-421c-b7b6-b22241259ca4"><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Read_gyroscope1.1.cydwr" Guid="556045d0-4da5-4977-98b8-bfaf483f4cb1" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\cyapicallbacks.h" Guid="132cdad6-c459-4df4-a3f0-a6eb1ff2cabb" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\UART.c" Guid="a1ad1683-9a5b-45ac-9efd-71711a465845" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\TopDesign\TopDesign.cysch" Guid="be30a3c7-259a-4c4e-81ea-59d2760ac690" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\mpu6050.c" Guid="4b867c81-ff28-4a09-bd79-596a3b0a994f" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\i2cFunctions.c" Guid="d3ad4a96-d747-421c-b7b6-b22241259ca4" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\main.c" Guid="deefde47-51ec-40da-9cdd-2aa69b37ff94" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050.c" Guid="4025dc9e-6b02-48ba-802e-fea7145b4063" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050.h" Guid="54fdab81-f52d-4c6b-8931-fee5c6bee880" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050_I2C.h" Guid="3b15aea6-6847-4583-a375-a6ed63f2fa9b" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="b5604e24-29d7-4f59-8035-69f1a21574f3" /><DocumentWindow Key="D:\UCU\POC\PSoC Creator\Gyroscope1.0\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050_I2C.c" Guid="5a9c3133-0c45-4e12-8f50-b98ea31253e6" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer /><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
