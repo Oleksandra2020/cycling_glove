@@ -1,7 +1,0 @@
-D:\UCU\POC\cycling_glove\Read_gyroscope1.1.cydsn\Read_gyroscope1.1.cyprj|f9bcc240-6106-43d1-8342-2081e59239a6
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|60662ad9-aa31-47c5-a5be-d215ddc150bb
-C:\Users\Asus\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|1e025864-c210-4668-8c5d-0977f13dcc01
-C:\Users\Asus\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|e7d09b68-f8e6-4c34-b9ed-a17e82b5da10
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b18a4a89-3495-496b-8929-e1c5d3f6a924
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|857d7915-6979-483b-9998-b61e135189ac
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|4c20953c-6020-412b-8c15-b0b3a0664240
