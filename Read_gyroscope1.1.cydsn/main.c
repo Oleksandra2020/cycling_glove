@@ -37,6 +37,9 @@ float   AX, AY, AZ; //acceleration floats
 float   GX, GY, GZ; //gyroscope floats
 
 float   Roll,Pitch,Yaw;
+float angle_gx=0,angle_gy=0,angle_gz=0;
+float angle_ax=0,angle_ay=0,angle_az=0;
+#define TIME_GYRO 2000
 
 void test_values()
 {
@@ -72,6 +75,7 @@ void test_values()
 
 int main (void)
 {
+    float FK = 0.9;
     CyGlobalIntEnable;   /* Enable global interrupts */
    
 	I2C_MPU6050_Start();
@@ -114,19 +118,35 @@ int main (void)
       Roll  = atan2f(AY, AZ) * 180/M_PI;
       Pitch = atan2f(AX, sqrt(AY*AY + AZ*AZ)) * 180/M_PI;    
     
+      angle_ax = atan2(AY,AZ)*180/M_PI;
+      angle_ay = atan2(AX,AZ)*180/M_PI;
+      angle_az = atan2(AY,AX)*180/M_PI;
+    
+    
+      angle_gx = angle_gx + GX*TIME_GYRO/1000000.0;
+      angle_gy = angle_gy + GY*TIME_GYRO/1000000.0;
+      angle_gz = angle_gz + GZ*TIME_GYRO/1000000.0;
+    
+      //Комплементарний фільтр
+      angle_ax = angle_ax*FK + angle_gx *(1-FK);
+      angle_ay = angle_ay*FK + angle_gy *(1-FK);
+      angle_az = angle_az*FK + angle_gz *(1-FK);
+    
+    //sprintf(Abuf, "AX:%f, AY:%f, AZ:%f\t", angle_ax,angle_ay,angle_az);
+      UART_UartPutString(Abuf);
     //show control values
-      sprintf(Abuf, "roll: %f; pitch: %f\t\r\n",Roll,Pitch);
+      //sprintf(Abuf, "roll: %f; pitch: %f\t\r\n",Roll,Pitch);
       UART_UartPutString(Abuf);
     
     float control_num = 40;//control angle
-    if(Roll>=control_num)
+    if(angle_ax>=control_num)//if(Roll>=control_num)
     {
         //Right
         UART_UartPutString("\r\n\nRight\n\n\r");
         Right_Write(0);
         CyDelay(500);
     }
-    else if(Roll<=-control_num)
+    else if(angle_ax<=-control_num)//else if(Roll<=-control_num)
     {
         //Left
         UART_UartPutString("\r\n\nLeft\n\n\r");
@@ -134,14 +154,14 @@ int main (void)
         Down_Write(0);
         CyDelay(500);
     }
-    else if(Pitch>=control_num)
+    else if(angle_ay>=control_num)//else if(Pitch>=control_num)
     {
         //Down
         UART_UartPutString("\r\n\nDown\n\n\r");
         Down_Write(0);
         CyDelay(500);
     }
-    else if(Pitch<=-control_num)
+    else if(angle_ay<=-control_num)//else if(Pitch<=-control_num)
     {
         //Up
         UART_UartPutString("\r\n\nUp\n\n\r");
