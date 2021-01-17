@@ -1,0 +1,7 @@
+C:\Users\gala_\Documents\cycling_glove\together\Read_gyroscope1.1.cydsn\Read_gyroscope1.1.cyprj|4ab7ee10-7141-4c69-b89d-7bef9d73fe0e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|18d473e5-7959-4bd0-b802-464677351788
+C:\Users\gala_\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|0eb1104d-2ad4-465d-9348-f700d01c4cd2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2de5d591-5deb-4db9-9414-3a7479a03564
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|da4dc6a6-29e3-4d9c-b9b9-7157f6c41c36
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|452f1e55-a72f-41d0-9da5-aff6589f49cc
+C:\Users\gala_\Documents\cycling_glove\together\BikeStatusMaster\PSoC_4_BLE_Central_IAS.cydsn\PSoC_4_BLE_Central_IAS.cyprj|366631a0-6231-4189-82cf-114c5906958d

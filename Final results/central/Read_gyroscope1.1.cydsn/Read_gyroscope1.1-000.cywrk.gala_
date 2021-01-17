@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\main.c">
+<ExpandedNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\TopDesign</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\Pins</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\Analog</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\Clocks</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\Interrupts</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\System</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\Directives</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.cydwr\Flash Security</v>
+<v>Read_gyroscope1.1-000\justUART\Header Files</v>
+<v>Read_gyroscope1.1-000\justUART\Header Files\cyapicallbacks.h</v>
+<v>Read_gyroscope1.1-000\justUART\Source Files</v>
+<v>Read_gyroscope1.1-000\justUART\Source Files\main.c</v>
+<v>Read_gyroscope1.1-000\justUART\Generated_Source</v>
+<v>Read_gyroscope1.1-000\justUART\Generated_Source\PSoC4</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\TopDesign</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\Pins</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\Analog</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\DMA</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\Clocks</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\Interrupts</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\System</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\Directives</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.cydwr\Flash Security</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Header Files</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Header Files\BLEApplications.h</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Header Files\BLEclient.h</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Header Files\main.h</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Source Files</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Source Files\BLEApplications.c</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Source Files\BLEclient.c</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Source Files\main.c</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Generated_Source</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\Generated_Source\PSoC4</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Pins</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Analog</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Clocks</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Interrupts</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\System</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Directives</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Flash Security</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\BLEApplications.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\BLEclient.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\cyapicallbacks.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\main.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\mpu6050.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\BLEApplications.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\BLEclient.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\i2cFunctions.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\main.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\mpu6050.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Read_gyroscope1.1-000\justUART\Generated_Source\PSoC4\project.h</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Pins</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Analog</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Clocks</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Interrupts</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\System</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Directives</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.cydwr\Flash Security</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\BLEApplications.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\BLEclient.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\cyapicallbacks.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\main.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Header Files\mpu6050.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\BLEApplications.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\BLEclient.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\i2cFunctions.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\main.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Source Files\mpu6050.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\BLE</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\BLE_bless_isr</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\cy_boot</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\cy_lfclk</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\Em_EEPROM_Dynamic</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050.h</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_BOOT.c</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Generated_Source\PSoC4\I2C_MPU6050\I2C_MPU6050_BOOT.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\TopDesign</v>
+<v>Read_gyroscope1.1-000\justUART\TopDesign\TopDesign.cysch</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\TopDesign</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\TopDesign\TopDesign.cysch</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\TopDesign</v>
+<v>Read_gyroscope1.1-000\justUART\TopDesign\TopDesign.cysch</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\TopDesign</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\TopDesign\TopDesign.cysch</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\justUART.elf</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\justUART.hex</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\justUART.map</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.gpdsc</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.rpt</v>
+<v>Read_gyroscope1.1-000\justUART\justUART_timing.html</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLEApplications.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\BLEclient.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_button.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\LedConnectedStatus.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\LedConnectedStatus_PM.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\LedScanningStatus.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\LedScanningStatus_PM.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\LedServiceDiscoveryStatus.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\LedServiceDiscoveryStatus_PM.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\User_Button.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\Listing Files\User_Button_PM.lst</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\PSoC_4_BLE_Central_IAS.elf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\PSoC_4_BLE_Central_IAS.hex</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\CortexM0\ARM_GCC_541\Debug\PSoC_4_BLE_Central_IAS.map</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.gpdsc</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS.rpt</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC_4_BLE_Central_IAS_timing.html</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_bless_isr.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_custom.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_eventHandler.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_gatt.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_INT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLE_HAL_PVT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLEApplications.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\BLEclient.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_I2C.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_I2C_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_I2C_INT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_I2C_MASTER.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_SCB_IRQ.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_SCBCLK.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_scl.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_scl_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_sda.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_MPU6050_sda_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\i2cFunctions.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\LedConnectedStatus.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\LedConnectedStatus_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\LedScanningStatus.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\LedScanningStatus_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\LedServiceDiscoveryStatus.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\LedServiceDiscoveryStatus_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\mpu6050.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Read_gyroscope1.1.elf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Read_gyroscope1.1.hex</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\CortexM0\ARM_GCC_541\Debug\Read_gyroscope1.1.map</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.gpdsc</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1.rpt</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\Read_gyroscope1.1_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\justUART.elf</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\justUART.hex</v>
+<v>Read_gyroscope1.1-000\justUART\CortexM0\ARM_GCC_541\Debug\justUART.map</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.gpdsc</v>
+<v>Read_gyroscope1.1-000\justUART\justUART.rpt</v>
+<v>Read_gyroscope1.1-000\justUART\justUART_timing.html</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\PSoC 4 Architecture TRM</v>
+<v>Read_gyroscope1.1-000\justUART\PSoC 4200 BLE Family Datasheet</v>
+<v>Read_gyroscope1.1-000\justUART\System Reference Guides</v>
+<v>Read_gyroscope1.1-000\justUART\System Reference Guides\cy_boot_v6_0</v>
+<v>Read_gyroscope1.1-000\justUART\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Read_gyroscope1.1-000\justUART\SCB_P4_v4_0.pdf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC 4 Architecture TRM</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC 4200 BLE Family Datasheet</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides\cy_boot_v5_70</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides\cy_dmac_v1_10</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\BLE_v3_50.pdf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\cy_isr_v1_70.pdf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\cy_pins_v2_20</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\PSoC 4 Architecture TRM</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\PSoC 4200 BLE Family Datasheet</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\System Reference Guides</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\System Reference Guides\cy_boot_v6_0</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\BLE_v3_50.pdf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\cy_pins_v2_20</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\SCB_P4_v4_0</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Read_gyroscope1.1-000</v>
+<v>Read_gyroscope1.1-000\justUART</v>
+<v>Read_gyroscope1.1-000\justUART\PSoC 4 Architecture TRM</v>
+<v>Read_gyroscope1.1-000\justUART\PSoC 4200 BLE Family Datasheet</v>
+<v>Read_gyroscope1.1-000\justUART\System Reference Guides</v>
+<v>Read_gyroscope1.1-000\justUART\System Reference Guides\cy_boot_v6_0</v>
+<v>Read_gyroscope1.1-000\justUART\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Read_gyroscope1.1-000\justUART\SCB_P4_v4_0.pdf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC 4 Architecture TRM</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\PSoC 4200 BLE Family Datasheet</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides\cy_boot_v5_70</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides\cy_dmac_v1_10</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\BLE_v3_50.pdf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\cy_isr_v1_70.pdf</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\cy_pins_v2_20</v>
+<v>Read_gyroscope1.1-000\PSoC_4_BLE_Central_IAS\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\PSoC 4 Architecture TRM</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\PSoC 4200 BLE Family Datasheet</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\System Reference Guides</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\System Reference Guides\cy_boot_v6_0</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\BLE_v3_50.pdf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\cy_pins_v2_20</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\SCB_P4_v4_0</v>
+<v>Read_gyroscope1.1-000\Read_gyroscope1.1\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Read_gyroscope1.1.cydwr" />
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\i2cFunctions.c" />
+<name v=".\Generated_Source\PSoC4\I2C_MPU6050.c" />
+<name v=".\Generated_Source\PSoC4\I2C_MPU6050.h" />
+<name v=".\Generated_Source\PSoC4\I2C_MPU6050_I2C_MASTER.c" />
+<name v=".\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="878, 699" SelectedTabbedMdiWindow="0711e0db-d433-462c-86ae-75dfe83d6502"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="8cbd096e-1322-45b6-a219-81f2091454c8" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\Read_gyroscope1.1.cydwr" Guid="e59cc340-3b2a-42be-a4d9-09039e9015a9" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\TopDesign\TopDesign.cysch" Guid="0711e0db-d433-462c-86ae-75dfe83d6502" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\i2cFunctions.c" Guid="88fd2b89-37da-445e-a370-b00827674bd5" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050.c" Guid="1f5738b4-e24d-4abf-a227-24eeb35b5561" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050.h" Guid="a6ffd83c-b0ce-4311-9794-2aaccabf77d3" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\Generated_Source\PSoC4\I2C_MPU6050_I2C_MASTER.c" Guid="71739f25-8dde-4a88-acc2-30961b8464a8" /><DocumentWindow Key="C:\Users\gala_\Documents\cycling_glove\gyro\Read_gyroscope1.1.cydsn\main.c" Guid="f38c9f31-b0d1-46ae-a540-b4273fc5b334" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

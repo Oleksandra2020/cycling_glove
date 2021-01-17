@@ -1,0 +1,10 @@
+C:\Users\gala_\Documents\cycling_glove\together\AN91162\ICGPanel_ble_led.cydsn\ICGPanel_ble_led.cyprj|f7d4a925-f299-479c-baaa-57361e25e2b8
+C:\Users\gala_\Documents\cycling_glove\WS281xLib.cylib\WS281xLib.cyprj|35a9ef56-cb63-4a11-ac7f-b0f2f1b8a668
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e34339f5-1bf3-48a7-8e70-ae1d18101744
+C:\Users\gala_\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|8bfa5e16-6963-47be-b125-d3b4682c4a9d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e9747952-2b74-4095-9262-ee04530dd284
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9ed52d79-ff20-482a-94b6-9618991812db
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0685f7e0-74a1-4fba-b637-8daecf242a57
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|b01d6b1b-c2c1-4535-af1d-f0e287c6d366
+C:\Users\gala_\Documents\cycling_glove\together\sasha.cydsn\sasha.cyprj|66f8f495-8a6e-4eb4-ac88-8454cf5d346a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|08c40dcd-3616-46f6-a400-17caba037ed1
